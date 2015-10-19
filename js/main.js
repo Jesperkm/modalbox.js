@@ -11,6 +11,7 @@ $(document).ready(function() {
 
     // toggle modal
     function toggleModal() {
+		$('div.modal-content *').addClass('no-close');
         modalOverlay.show();
         setTimeout(function() {
             modalOverlay.addClass('disp');
