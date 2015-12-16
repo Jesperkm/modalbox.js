@@ -37,7 +37,8 @@ $(document).ready(function() {
     }
 
     // bind button to toggle modal
-    $('.modal-btn').on('click', function() {
+    $('.modal-btn').on('click', function(e) {
+        e.preventDefault();
         toggleModal();
     });
 
