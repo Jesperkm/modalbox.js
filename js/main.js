@@ -11,7 +11,7 @@ $(document).ready(function() {
 
     // toggle modal
     function toggleModal() {
-		$('div.modal-content *').addClass('no-close');
+		$('div.modal-content').addClass('no-close');
         modalOverlay.show();
         setTimeout(function() {
             modalOverlay.addClass('disp');
@@ -24,7 +24,7 @@ $(document).ready(function() {
     // hide modal
     function removeModal(e) {
         // if clicked inside modal box, ignore it
-        if ($(e.target).hasClass('no-close')) {
+        if ($(e.target).closest('.no-close')[0]) {
             return false;
         } else {
             modalOverlay.removeClass('disp');
