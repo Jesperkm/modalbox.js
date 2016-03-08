@@ -63,11 +63,13 @@ div.modal-overlay {
     width: 90%;
     height: auto;
     max-width: 920px;
-    margin-top: 350px;
-    -webkit-transition: 0.3s margin-top ease-in-out, 0.2s opacity ease-in-out;
-    -moz-transition: 0.3s margin-top ease-in-out, 0.2s opacity ease-in-out;
-    -o-transition: 0.3s margin-top ease-in-out, 0.2s opacity ease-in-out;
-    transition: 0.3s margin-top ease-in-out, 0.2s opacity ease-in-out; }
+    -webkit-transform: translate3d(0, 150px, 0);
+    -moz-transform: translate3d(0, 150px, 0);
+    transform: translate3d(0, 150px, 0);
+    -webkit-transition: 0.3s transform ease-in-out, 0.2s opacity ease-in-out;
+    -moz-transition: 0.3s transform ease-in-out, 0.2s opacity ease-in-out;
+    -o-transition: 0.3s transform ease-in-out, 0.2s opacity ease-in-out;
+    transition: 0.3s transform ease-in-out, 0.2s opacity ease-in-out; }
     @media screen and (max-width: 500px) {
       div.modal-overlay div.modal-box div.inner-modal {
         height: 200px; } }
@@ -85,7 +87,9 @@ div.modal-overlay {
         height: auto; }
   div.modal-overlay div.modal-box div.inner-modal.disp {
     opacity: 1;
-    margin-top: 0; }
+    -webkit-transform: translate3d(0, 0px, 0);
+    -moz-transform: translate3d(0, 0px, 0);
+    transform: translate3d(0, 0px, 0); }
 
 div.modal-overlay.disp {
   opacity: 1; }
