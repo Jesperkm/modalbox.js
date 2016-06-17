@@ -31,15 +31,18 @@ $(document).ready(function() {
             modalBox.removeClass('disp');
             setTimeout(function() {
                 modalOverlay.hide();
-                // modalContent.empty();
+                modalContent.empty();
             }, 300);
         }
     }
 
     // bind button to toggle modal
-    $('.modal-btn').on('click', function(e) {
+    $(document).on('click', '.modal-btn', function(e) {
         e.preventDefault();
         toggleModal();
+        var modalSlug = $(this).attr('data-modalslug');
+        var contentToAppend = $('[data-type="modalcontent"][data-modalslug="'+modalSlug+'"]').html();
+        modalContent.append(contentToAppend);
     });
 
     // bind overlay to hide modal
